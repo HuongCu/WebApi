@@ -11,5 +11,7 @@ namespace Simple.Api.Services
 		Task UpdateCustomerAsync(Customer customer, int customerId);
 
 		Task<IList<Customer>> GetCustomersAsync(string searchString);
+
+		Task DeleteCustomerAsync(int id);
 	}
 }

@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.Api.Repositories", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.Api.Services", "Simple.Api.Services\Simple.Api.Services.csproj", "{2B58B475-F606-4539-833C-58949D15A3C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Api.Common", "Simple.Api.Common\Simple.Api.Common.csproj", "{91ABDDCC-7CA6-4C2D-9895-C7FFE4C406CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple.Api.Common", "Simple.Api.Common\Simple.Api.Common.csproj", "{91ABDDCC-7CA6-4C2D-9895-C7FFE4C406CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Api.Repositories.Tests", "Simple.Api.Repositories.Tests\Simple.Api.Repositories.Tests.csproj", "{DD3A7A4F-0810-49DC-AD08-A8A1D5EF3E1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{91ABDDCC-7CA6-4C2D-9895-C7FFE4C406CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91ABDDCC-7CA6-4C2D-9895-C7FFE4C406CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91ABDDCC-7CA6-4C2D-9895-C7FFE4C406CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD3A7A4F-0810-49DC-AD08-A8A1D5EF3E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD3A7A4F-0810-49DC-AD08-A8A1D5EF3E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD3A7A4F-0810-49DC-AD08-A8A1D5EF3E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD3A7A4F-0810-49DC-AD08-A8A1D5EF3E1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

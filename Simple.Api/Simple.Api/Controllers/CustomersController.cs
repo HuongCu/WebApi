@@ -47,8 +47,6 @@ namespace Simple.Api.Controllers
 
 
 		}
-
-		// PUT api/values/5
 		[HttpPut("{id}")]
 		public async Task<ActionResult> Put(int id, [FromBody] Customer customer)
 		{
@@ -65,10 +63,20 @@ namespace Simple.Api.Controllers
 			}
 		}
 
-		// DELETE api/values/5
 		[HttpDelete("{id}")]
-		public void Delete(int id)
+		public async Task<ActionResult> Delete(int id)
 		{
+			try
+			{
+				await _customerService.DeleteCustomerAsync(id);
+				return Ok();
+			}
+			catch (HttpException ex)
+			{
+				if (ex.ResponseStatusCode == System.Net.HttpStatusCode.NotFound)
+					return NotFound();
+				return StatusCode((int)HttpStatusCode.InternalServerError);
+			}
 		}
 	}
 }

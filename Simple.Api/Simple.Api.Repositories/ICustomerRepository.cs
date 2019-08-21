@@ -15,5 +15,7 @@ namespace Simple.Api.Repositories
 		Task<IEnumerable<Customer>> GetCustomersAsync();
 
 		Task<Customer> GetCustomerAsync(int id);
+
+		Task DeleteCustomerAsync(Customer entity);
 	}
 }

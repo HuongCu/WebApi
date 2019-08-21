@@ -22,6 +22,19 @@ namespace Simple.Api.Services
 		{
 			return await _customerRepository.AddCustomerAsync(customer);
 		}
+
+		public async Task DeleteCustomerAsync(int id)
+		{
+			var persistedCustomer = await _customerRepository.GetCustomerAsync(id);
+			if (persistedCustomer == null)
+			{
+				throw new HttpException("Customer Not Found", System.Net.HttpStatusCode.NotFound);
+			}
+
+			await _customerRepository.DeleteCustomerAsync(persistedCustomer);
+
+		}
+
 		/// <summary>
 		/// Search customer by partial firstname Or LastName
 		/// </summary>
@@ -34,9 +47,9 @@ namespace Simple.Api.Services
 										|| (x.LastName!=null &&  x.LastName.Equals(searchString)))?.ToList();
 		}
 
-		public async Task UpdateCustomerAsync(Customer customer, int customerId)
+		public async Task UpdateCustomerAsync(Customer customer, int id)
 		{
-			var persistedCustomer = await _customerRepository.GetCustomerAsync(customerId);
+			var persistedCustomer = await _customerRepository.GetCustomerAsync(id);
 			if (persistedCustomer == null)
 			{
 				throw new HttpException("Customer Not Found", System.Net.HttpStatusCode.NotFound);

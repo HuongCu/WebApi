@@ -34,5 +34,12 @@ namespace Simple.Api.Repositories
 		{
 			return await _dbContext.Customers.FirstOrDefaultAsync(x => x.CustomerId == id);
 		}
+
+		public async Task DeleteCustomerAsync(Customer entity)
+		{
+			 _dbContext.Customers.Remove(entity);
+			await _dbContext.SaveChangesAsync();
+
+		}
 	}
 }
