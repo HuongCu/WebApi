@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Simple.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Simple.Api.Controllers.CustomersController.Get(System.String)">
+            <summary>
+            Search customers by firstName or lastName
+            </summary>
+            <param name="searchString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Simple.Api.Controllers.CustomersController.Post(Simple.Api.Model.Customer)">
+            <summary>
+            Add customer
+            </summary>
+            <param name="customer"></param>
+        </member>
+        <member name="M:Simple.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Simple.Api.ApplicationSettings)">
+            <summary>
+            config swagger and basic settings
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+            <param name="applicationSettings"></param>
+        </member>
+    </members>
+</doc>

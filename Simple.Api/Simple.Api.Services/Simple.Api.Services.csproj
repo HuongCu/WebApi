@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Simple.Api.Common\Simple.Api.Common.csproj" />
+    <ProjectReference Include="..\Simple.Api.Model\Simple.Api.Model.csproj" />
+    <ProjectReference Include="..\Simple.Api.Repositories\Simple.Api.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

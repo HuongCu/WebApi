@@ -1,0 +1,13 @@
+########################
+# visual studio folder #
+########################
+.vs
+packages
+*.lock.json
+node_modules
+
+*.vspscc
+/global.json_BKP
+bin
+obj
+config
